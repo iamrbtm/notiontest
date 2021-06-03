@@ -1,0 +1,5 @@
+{
+    "notion":"secret_E56vtGLhJHUK1o7WerXlnUaZHcbHnnlyFiMuPPwU1bz",
+    "nutritionix":"12ea571cf69f50e50d0b62fefb77acbe\\",
+    "test":"secret_7wsjktbQDa0QkNqSfX5UjlJX4cWWpUoMq1909vQAeUl"
+}
