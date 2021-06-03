@@ -7,7 +7,9 @@ headers = {
     'Authorization': f"Bearer " + auth('test'),
     'Notion-Version': '2021-05-13',
 }
-url = 'https://api.notion.com/v1/pages/'+page_id[1]
-response = requests.post(url, headers=headers)
+response = requests.get(f'https://api.notion.com/v1/pages/{page_id[1]}', headers=headers)
+
+with open (page_id[1]+".json",'w') as file:
+    file.write(response.text)
 
 print (response.text)
