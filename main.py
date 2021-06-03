@@ -1,15 +1,11 @@
 import requests
-from notion import auth, parse_from_URL
+from notion import auth, parse_from_URL, get_database, get_page
 
-page_id = parse_from_URL('https://www.notion.so/notionTest-ed9833176af54b33bd60c45166602798')
+page_id = parse_from_URL('https://www.notion.so/Jerem-c82f8aa02273478991123a1738a28ecc')
 
-headers = {
-    'Authorization': f"Bearer " + auth('test'),
-    'Notion-Version': '2021-05-13',
-}
-response = requests.get(f'https://api.notion.com/v1/pages/{page_id[1]}', headers=headers)
-
+data = get_page(page_id[1])
 with open (page_id[1]+".json",'w') as file:
-    file.write(response.text)
+    file.write(data.text)
 
-print (response.text)
+with open ('database.json','w') as file:
+           file.write(get_database('40025654-dae0-40c1-baff-270735299090').text)

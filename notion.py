@@ -1,10 +1,12 @@
 import json
+import requests
+
 
 def parse_from_URL(in_url):
-    # parse the id of the page from the URL given
-    #from: https://www.notion.so/notionTest-ed9833176af54b33bd60c45166602798
-    #to: ed9833176af54b33bd60c45166602798
-    #to: ed983317-6af5-4b33-bd60-c45166602798 (8-4-4-4-12)
+    """Parse the id of the page from the URL given\n
+    from: https://www.notion.so/notionTest-ed9833176af54b33bd60c45166602798\n
+    to: ed9833176af54b33bd60c45166602798\n
+    to: ed983317-6af5-4b33-bd60-c45166602798 (8-4-4-4-12)"""
     
     URL = str(in_url)
     #find last - or /
@@ -26,4 +28,21 @@ def auth(auth_name):
             keys = json.loads(data)
     key = keys[auth_name]
     return key
-auth.__doc__ = "A simple function that says hello... Richie style"
+
+def get_database(db_id):
+    headers = {
+        'Authorization': f"Bearer " + auth('test'),
+        'Notion-Version': '2021-05-13',
+    }
+
+    response = requests.get(f'https://api.notion.com/v1/databases/{db_id}', headers=headers)
+    return response
+
+def get_page(page_id):
+    headers = {
+    'Authorization': f"Bearer " + auth('test'),
+    'Notion-Version': '2021-05-13',
+    }
+    response = requests.get(f'https://api.notion.com/v1/pages/{page_id}', headers=headers)
+    
+    return response
