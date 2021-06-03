@@ -1,0 +1,71 @@
+{
+    "object": "page",
+    "id": "9de5b378-59c8-4011-96fd-c1455cebd063",
+    "created_time": "2021-06-03T07:22:48.162Z",
+    "last_edited_time": "2021-06-03T07:47:00.000Z",
+    "parent": {
+        "type": "database_id",
+        "database_id": "40025654-dae0-40c1-baff-270735299090"
+    },
+    "archived": false,
+    "properties": {
+        "Tags": {
+            "id": "DET^",
+            "type": "multi_select",
+            "multi_select": [{
+                "id": "1c14e888-4e17-45eb-98d2-934931323fbe",
+                "name": "two",
+                "color": "blue"
+            }]
+        },
+        "Property 4": {
+            "id": "NgVh",
+            "type": "checkbox",
+            "checkbox": false
+        },
+        "Property": {
+            "id": "Of|R",
+            "type": "date",
+            "date": {
+                "start": "2021-06-03",
+                "end": null
+            }
+        },
+        "Property 2": {
+            "id": "aecP",
+            "type": "email",
+            "email": "idk@ireallydk.com"
+        },
+        "Property 1": {
+            "id": "cor`",
+            "type": "number",
+            "number": 3.3
+        },
+        "Property 3": {
+            "id": "wRQV",
+            "type": "phone_number",
+            "phone_number": "1234567890"
+        },
+        "Name": {
+            "id": "title",
+            "type": "title",
+            "title": [{
+                "type": "text",
+                "text": {
+                    "content": "testing",
+                    "link": null
+                },
+                "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                },
+                "plain_text": "testing",
+                "href": null
+            }]
+        }
+    }
+}
